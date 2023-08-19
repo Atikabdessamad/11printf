@@ -33,4 +33,6 @@ int _putchar(char *buffer, int buffersize);
 int flags1(const char *ss, int idx);
 int char_len1(char *cha);
 
+int main(void);
+
 #endif
