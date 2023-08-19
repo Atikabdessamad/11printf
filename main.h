@@ -19,29 +19,29 @@
 #define S_SHORT 1
 
 /**
- * struct fm - Struct option
+ * struct fmt - Struct op
  *
- * @fm: The format.
- * @f: The function associated.
+ * @fmt: The format.
+ * @fn: The function associated.
  */
-struct fm
+struct fmt
 {
-	char fm;
-	int (*f)(va_list, char[], int, int, int, int);
+	char fmt;
+	int (*fn)(va_list, char[], int, int, int, int);
 };
 
 
 /**
- * typedef struct fm fm_t - Struct option
+ * typedef struct fmt fmt_t - Struct op
  *
- * @fm: The format
- * @fm_t: The funct associated.
+ * @fmt: The format.
+ * @fm_t: The function associated.
  */
-typedef struct fm fm_t;
+typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
-va_list l, char buffer[], int flags, int width, int precision, int size);
+va_list list, char buffer[], int flags, int width, int precision, int size);
 
 /****************** FUNCTIONS ******************/
 
@@ -104,14 +104,14 @@ int write_pointer(char buffer[], int ind, int length,
 
 int write_unsgnd(int is_negative, int ind,
 char buffer[],
-	int flags1, int width, int precision, int size);
+	int flags, int width, int precision, int size);
 
 /****************** UTILS ******************/
-int is_printable1(char);
-int append_hexa_code1(char, char[], int);
-int is_digit1(char);
+int is_printable(char);
+int append_hexa_code(char, char[], int);
+int is_digit(char);
 
-long int convert_size_number1(long int num, int size);
-long int convert_size_unsgnd1(unsigned long int num, int size);
+long int convert_size_number(long int num, int size);
+long int convert_size_unsgnd(unsigned long int num, int size);
 
 #endif /* MAIN_H */
