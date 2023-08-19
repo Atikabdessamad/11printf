@@ -28,7 +28,7 @@ int per_handler1(va_list ar __attribute__((unused)), char *a, unsigned int b);
 int binary_handler1(va_list arg_l, char *buffer, unsigned int buf_size);
 
 
-unsigned int buffer_handler1(char *buffer, char ch, unsigned int buffer_size);
+unsigned int buffer_handler1(char *buffer, char c, unsigned int buffer_size);
 int _putchar(char *buffer, int buffersize);
 int flags1(const char *ss, int idx);
 int char_len1(char *cha);
