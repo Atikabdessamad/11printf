@@ -2,7 +2,7 @@
 
 /**
 *_putchar - Function printing char
-*@buffersize: Size 
+*@buffersize: Size
 *@buffer: str
 *Return: int
 */

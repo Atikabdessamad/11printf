@@ -41,33 +41,3 @@ int main(void)
 	printf("Len:[%d]\n", len2);
 	return (0);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	

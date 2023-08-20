@@ -8,7 +8,7 @@
 */
 int flags1(const char *ss, int idx)
 {
-	op p[] = {
+	optn pt[] = {
 		{"c", char_handler},
 		{"s", str_handler},
 		{"d", int_handler},
@@ -20,11 +20,11 @@ int flags1(const char *ss, int idx)
 	int x = 0, cm = 0, x_idx;
 
 	x_idx = idx;
-	while (p[x].f)
+	while (pt[x].flg)
 	{
-		if (ss[idx] == p[x].f[cm])
+		if (ss[idx] == pt[x].flg[cm])
 		{
-			if (p[x].f[cm + 1] != '\0')
+			if (pt[x].flg[cm + 1] != '\0')
 			{
 				idx++;
 				cm++;

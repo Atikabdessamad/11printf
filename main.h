@@ -6,25 +6,26 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * struct opt - Structure for options
- * @f: str ptr
- * @ptr: ptr func
- * Description: Defin type stucter op with f and ptr
- */
-struct opt
-{
-	char *f;
-	void (*ptr)(va_list, char *, unsigned int);
+* struct option - Stucture Option
+* @flg: Str ptr
+* @ptr: Ptr to the func
+* Description: Define type struct optn with flg and ptr
+*/
 
-} op;
+typedef struct option
+{
+	char *flg;
+	int (*ptr)(va_list, char *, unsigned int);
+
+} optn;
 
 /*functions Prototypes */
-int (*get_handler1(const char *p, int idx))(va_list, char *, unsigned int);
+int (*get_handler1(const char *spp, int idx))(va_list, char *, unsigned int);
 int _printf(const char *format, ...);
 int char_handler(va_list ar, char *buffer, unsigned int buffer_size);
 int int_handler(va_list ar, char *buffer, unsigned int buffer_size);
 int str_handler(va_list ar, char *buffer, unsigned int buffer_size);
-int per_handler1(va_list ar __attribute__((unused)), char *a, unsigned int b);
+int per_handler1(va_list arg __attribute__((unused)), char *a, unsigned int b);
 int binary_handler1(va_list arg_l, char *buffer, unsigned int buf_size);
 
 
